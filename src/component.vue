@@ -1,5 +1,7 @@
 <template lang="html">
   <input type="tel"
+         @blur="$emit('blur', $event)"
+         @focus="$emit('focus', $event)"
          :value="formattedValue"
          @change="change"
          v-money="{precision, decimal, thousands, prefix, suffix}"
